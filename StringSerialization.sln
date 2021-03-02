@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringSerialization", "StringSerialization\StringSerialization.csproj", "{C69F6C44-BF6B-4FD1-9391-303359F3FFDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringSerializationTest", "StringSerializationTest\StringSerializationTest.csproj", "{671CEA21-596F-400A-AF17-C8B0BEBA5327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C69F6C44-BF6B-4FD1-9391-303359F3FFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69F6C44-BF6B-4FD1-9391-303359F3FFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69F6C44-BF6B-4FD1-9391-303359F3FFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69F6C44-BF6B-4FD1-9391-303359F3FFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671CEA21-596F-400A-AF17-C8B0BEBA5327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671CEA21-596F-400A-AF17-C8B0BEBA5327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671CEA21-596F-400A-AF17-C8B0BEBA5327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671CEA21-596F-400A-AF17-C8B0BEBA5327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B62A78BF-9B42-4659-A515-1FE6E305B79A}
+	EndGlobalSection
+EndGlobal
