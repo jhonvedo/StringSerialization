@@ -25,10 +25,28 @@ namespace StringSerialization
                 {
                     var attribute = (TextPropertyAttribute)propertyInfo.GetCustomAttributes(typeof(TextPropertyAttribute)).First();
                     var newPropertyValue = GetPositionValue(value, attribute.From, attribute.Length);
-                    propertyInfo.SetValue(model, newPropertyValue);
+                 
+                    propertyInfo.SetValue(model, SetValueByType(newPropertyValue,propertyInfo.PropertyType));
+                    
+
                 }
             }
             
+        }
+
+        private static object SetValueByType(string value,Type propertyType){
+            string typeName = propertyType.Name;            
+            switch (typeName)
+            {
+                case "Boolean":
+                    return value.ToUpper().Equals("TRUE");
+                case "Int32":
+                    return int.Parse(value);
+                case "Int64":
+                    return long.Parse(value);
+                
+                default: return value;
+            }
         }
 
         private static string GetPositionValue(string line, int from, int length)
@@ -41,5 +59,7 @@ namespace StringSerialization
 
             return line.Substring(from, length);
         }
+
+         
     }
 }
