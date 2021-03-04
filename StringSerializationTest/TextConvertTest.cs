@@ -34,6 +34,13 @@ namespace StringSerializationTest
             Assert.Equal(239,@object.Prop5);
         }
 
-       
+
+        [Fact]
+        public void Error()
+        {
+            string value = "ee";      
+            _= Assert.Throws<ArgumentOutOfRangeException>(() => TextConvert.Deserialize<SimpleModel>(value));
+        }
+
     }
 }

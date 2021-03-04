@@ -10,8 +10,7 @@ namespace StringSerialization
         public TextConvertBase(string value)
         {
             Fill(value);
-        }
-        public void Load(string value) => Fill(value);
+        }       
         private void Fill(string value)
         {
             TextConvert.Fill(value, this);

@@ -51,12 +51,6 @@ namespace StringSerialization
 
         private static string GetPositionValue(string line, int from, int length)
         {
-
-            if (from + length > line.Length || from > line.Length)
-            {               
-                throw new IndexOutOfRangeException();
-            }
-
             return line.Substring(from, length);
         }
 
