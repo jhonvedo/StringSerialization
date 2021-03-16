@@ -24,7 +24,7 @@ namespace StringSerialization
                 if (propertyInfo.IsDefined(typeof(TextPropertyAttribute)))
                 {
                     var attribute = (TextPropertyAttribute)propertyInfo.GetCustomAttributes(typeof(TextPropertyAttribute)).First();
-                    var newPropertyValue = GetPositionValue(value, attribute.From, attribute.Length);
+                    var newPropertyValue = GetPositionValue(value, attribute);
                  
                     propertyInfo.SetValue(model, SetValueByType(newPropertyValue,propertyInfo.PropertyType));
                     
@@ -49,9 +49,14 @@ namespace StringSerialization
             }
         }
 
-        private static string GetPositionValue(string line, int from, int length)
+        private static string GetPositionValue(string line, TextPropertyAttribute attribute)
         {
-            return line.Substring(from, length);
+            int? length = attribute.Length;
+            if(length != null && line.Length <  (attribute.From + length.Value) && !attribute.AllowPositionException)
+            {
+                length = line.Length - attribute.From;
+            }
+            return length == null ? line.Substring(attribute.From) :line.Substring(attribute.From, length.Value);
         }
 
          
